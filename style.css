@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+  /* Other */
+  /* Font stacks: https://kinsta.com/blog/web-safe-fonts/ */
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+  /* CSS Variables */
+  --ultra-light-taupe: hsl(60, 23%, 94%);
+  --eggshell-white: hsl(60, 27%, 98%);
+  --light-orange: hsl(30, 89%, 96%);
+  --mid-orange: hsl(30, 100%, 76%);
+  --purple: hsl(240, 100%, 99%);
+  --mid-purple: hsl(240, 100%, 83%);
+  --emergency: hsl(347, 88%, 97%);
+  --mid-emergency: hsl(347, 100%, 83%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--ultra-light-taupe);
+}
+
+.modal {
+  padding: 20px;
+  border: 1px solid black;
+  /* width: 33.3%; */
+
+  background-color: var(--eggshell-white);
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.accordion > div {
+  margin-bottom: 10px;
+}
+
+.accordion > div:first-child {
+  background-color: var(--light-orange);
+  border-left: 3px solid var(--mid-orange);
+}
+
+.accordion > div:nth-child(2) {
+  background-color: var(--purple);
+  border-left: 3px solid var(--mid-purple);
+}
+
+.accordion > div:last-child {
+  background-color: var(--emergency);
+  border-left: 3px solid var(--mid-emergency);
+}
+
+/*******************************/
+/* || Utilities */
+/*******************************/
+.noBullets {
+  list-style-type: none;
+}
