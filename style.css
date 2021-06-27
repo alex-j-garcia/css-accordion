@@ -36,8 +36,8 @@ body {
 
 .modal {
   padding: 20px;
-  border: 1px solid black;
-  /* width: 33.3%; */
+  width: 50%;
+  border-radius: 10px;
 
   background-color: var(--eggshell-white);
 }
@@ -49,7 +49,7 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 
 li {
@@ -58,23 +58,42 @@ li {
 
 .accordion > div {
   margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .accordion > div:first-child {
   background-color: var(--light-orange);
-  border-left: 3px solid var(--mid-orange);
+  border-left: 6px solid var(--mid-orange);
 }
 
 .accordion > div:nth-child(2) {
   background-color: var(--purple);
-  border-left: 3px solid var(--mid-purple);
+  border-left: 6px solid var(--mid-purple);
 }
 
 .accordion > div:last-child {
   background-color: var(--emergency);
-  border-left: 3px solid var(--mid-emergency);
+  border-left: 6px solid var(--mid-emergency);
 }
 
+.accordion-container {
+  position: relative;
+  padding: 5px 0 0 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.accordion-container::before {
+  content: "+";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  font-weight: 100;
+  color: hsla(0, 0%, 0%, 0.8);
+}
 /*******************************/
 /* || Utilities */
 /*******************************/
