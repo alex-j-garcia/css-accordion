@@ -54,6 +54,10 @@ h1 {
 h2 {
   font-size: 1.2rem;
   font-weight: 300;
+
+  transition-property: font-weight;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
 }
 
 li {
@@ -79,27 +83,37 @@ li {
   padding: 25px;
   margin-top: 10px;
   border-radius: 5px;
+  max-height: 64px;
+
+  /* Animation - height */
+  transition-property: max-height;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }
 
 .accordion-body {
   font-size: 1.2rem;
   line-height: 1.4;
-  height: 0;
-  overflow: hidden;
+  /* display: none; */
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 200ms;
 }
 
 /*******************************/
 /* || Hover Styles */
 /*******************************/
+.accordion-container:hover {
+  max-height: 500px;
+}
+
 .accordion-container:hover h2 {
   font-weight: 700;
 }
 
 .accordion-container:hover .accordion-body {
-  display: block;
-  height: auto;
-  transition-duration: 10000ms;
-  transition-property: height;
+  /* display: block; */
+  opacity: 1.0;
 }
 
 /* .accordion-container::before {
