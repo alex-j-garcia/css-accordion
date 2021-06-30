@@ -19,7 +19,7 @@ html {
   --eggshell-white: hsl(60, 27%, 98%);
   --light-orange: hsl(30, 89%, 96%);
   --mid-orange: hsl(30, 100%, 76%);
-  --purple: hsl(240, 100%, 99%);
+  --purple: hsl(240, 100%, 98%);
   --mid-purple: hsl(240, 100%, 83%);
   --emergency: hsl(347, 88%, 97%);
   --mid-emergency: hsl(347, 100%, 83%);
@@ -37,9 +37,13 @@ body {
 .modal {
   padding: 20px;
   width: 50%;
+  min-width: 295px;
+  max-width: 400px;
   border-radius: 10px;
 
   background-color: var(--eggshell-white);
+
+  box-shadow: 0 10px 15px -10px hsla(0, 0%, 0%, 0.1);
 }
 
 h1 {
@@ -49,17 +53,11 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  font-weight: 300;
 }
 
 li {
-  margin-bottom: 15px;
-}
-
-.accordion > div {
-  margin-bottom: 10px;
-  padding: 20px;
-  border-radius: 5px;
+  margin-top: 15px;
 }
 
 .accordion > div:first-child {
@@ -78,13 +76,33 @@ li {
 }
 
 .accordion-container {
-  position: relative;
-  padding: 5px 0 0 25px;
-  height: 25px;
+  padding: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.accordion-body {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  height: 0;
   overflow: hidden;
 }
 
-.accordion-container::before {
+/*******************************/
+/* || Hover Styles */
+/*******************************/
+.accordion-container:hover h2 {
+  font-weight: 700;
+}
+
+.accordion-container:hover .accordion-body {
+  display: block;
+  height: auto;
+  transition-duration: 10000ms;
+  transition-property: height;
+}
+
+/* .accordion-container::before {
   content: "+";
   display: block;
   position: absolute;
@@ -94,9 +112,26 @@ li {
   font-weight: 100;
   color: hsla(0, 0%, 0%, 0.8);
 }
+
+.accordion-container:hover {
+  overflow: auto;
+  height: auto;
+}
+
+
+
+.accordion-container:hover::before {
+  content: "-";
+  font-size: 1.5rem;
+} */
+
 /*******************************/
 /* || Utilities */
 /*******************************/
 .noBullets {
   list-style-type: none;
+}
+
+.debugging {
+  border: 1px solid red;
 }
