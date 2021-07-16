@@ -55,9 +55,7 @@ h2 {
   font-size: 1.2rem;
   font-weight: 300;
 
-  transition-property: font-weight;
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
+  transition: font-weight 150ms 20ms ease-out;
 }
 
 li {
@@ -85,19 +83,15 @@ li {
   border-radius: 5px;
   max-height: 64px;
 
-  /* Animation - height */
-  transition-property: max-height;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
+  transition: max-height 300ms ease-in-out;
 }
 
 .accordion-body {
   font-size: 1.2rem;
   line-height: 1.4;
-  /* display: none; */
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 200ms;
+
+  transition: opacity 100ms ease;
 }
 
 /*******************************/
@@ -112,7 +106,6 @@ li {
 }
 
 .accordion-container:hover .accordion-body {
-  /* display: block; */
   opacity: 1.0;
 }
 
