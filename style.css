@@ -51,11 +51,33 @@ h1 {
   margin-bottom: 20px;
 }
 
+.accordion-container {
+  position: relative;
+  padding: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+  max-height: 64px;
+
+  transition: max-height 300ms ease-in-out;
+}
+
 h2 {
+  display: inline-block;
+
   font-size: 1.2rem;
   font-weight: 300;
 
   transition: font-weight 150ms 20ms ease-out;
+}
+
+h2::before {
+  content: "+";
+  position: absolute;
+  left: 10px;
+  top: 19px;
+  font-size: 2rem;
+  font-weight: 100;
+  color: hsla(0, 0%, 0%, 0.8);
 }
 
 li {
@@ -75,15 +97,6 @@ li {
 .accordion > div:last-child {
   background-color: var(--emergency);
   border-left: 6px solid var(--mid-emergency);
-}
-
-.accordion-container {
-  padding: 25px;
-  margin-top: 10px;
-  border-radius: 5px;
-  max-height: 64px;
-
-  transition: max-height 300ms ease-in-out;
 }
 
 .accordion-body {
@@ -109,28 +122,11 @@ li {
   opacity: 1.0;
 }
 
-/* .accordion-container::before {
-  content: "+";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 2rem;
-  font-weight: 100;
-  color: hsla(0, 0%, 0%, 0.8);
-}
 
-.accordion-container:hover {
-  overflow: auto;
-  height: auto;
-}
-
-
-
-.accordion-container:hover::before {
+.accordion-container:hover h2::before {
   content: "-";
-  font-size: 1.5rem;
-} */
+  font-weight: 2rem;
+}
 
 /*******************************/
 /* || Utilities */
