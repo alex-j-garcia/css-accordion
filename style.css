@@ -1,18 +1,12 @@
+/***************************
+|| General Styles
+****************************/
 html {
+  /* Display & Box Model */
   box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
 
   /* Other */
-  /* Font stacks: https://kinsta.com/blog/web-safe-fonts/ */
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 62.5%;
 
   /* CSS Variables */
   --ultra-light-taupe: hsl(60, 23%, 94%);
@@ -25,105 +19,148 @@ html {
   --mid-emergency: hsl(347, 100%, 83%);
 }
 
+*,
+*::before,
+*::after {
+  /* Display & Box Model */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body {
-  height: 100vh;
+  /* Display & Box Model */
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 
+  /* Other */
   background-color: var(--ultra-light-taupe);
+  /* Font stacks: https://kinsta.com/blog/web-safe-fonts/ */
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .modal {
-  padding: 20px;
+  /* Display & Box Model */
   width: 50%;
   min-width: 295px;
   max-width: 400px;
+  padding: 20px;
   border-radius: 10px;
 
+  /* Other */
   background-color: var(--eggshell-white);
-
   box-shadow: 0 10px 15px -10px hsla(0, 0%, 0%, 0.1);
 }
 
 h1 {
-  font-size: 1.4rem;
+  /* Display & Box Model */
   margin-bottom: 20px;
+
+  /* Other */
+  font-size: 1.4rem;
 }
 
 .accordion-container {
+  /* Positioning */
   position: relative;
+
+  /* Display & Box Model */
+  max-height: 64px;
   padding: 25px;
   margin-top: 10px;
   border-radius: 5px;
-  max-height: 64px;
 
+  /* Animation */
   transition: max-height 300ms ease-in-out;
 }
 
 h2 {
+  /* Display & Box Model */
   display: inline-block;
 
+  /* Other */
   font-size: 1.2rem;
   font-weight: 300;
 
+  /* Animation */
   transition: font-weight 150ms 20ms ease-out;
 }
 
 h2::before {
-  content: "+";
+  /* Positioning */
   position: absolute;
   left: 10px;
   top: 19px;
+
+  /* Other */
+  content: "+";
   font-size: 2rem;
   font-weight: 100;
   color: hsla(0, 0%, 0%, 0.8);
 }
 
 li {
+  /* Display & Box Model */
   margin-top: 15px;
 }
 
 .accordion > div:first-child {
-  background-color: var(--light-orange);
+  /* Display & Box Model */
   border-left: 6px solid var(--mid-orange);
+
+  /* Other */
+  background-color: var(--light-orange);
 }
 
 .accordion > div:nth-child(2) {
-  background-color: var(--purple);
+  /* Display & Box Model */
   border-left: 6px solid var(--mid-purple);
+
+  /* Other */
+  background-color: var(--purple);
 }
 
 .accordion > div:last-child {
-  background-color: var(--emergency);
+  /* Display & Box Model */
   border-left: 6px solid var(--mid-emergency);
+
+  /* Other */
+  background-color: var(--emergency);
 }
 
 .accordion-body {
+  /* Other */
   font-size: 1.2rem;
   line-height: 1.4;
   opacity: 0;
 
+  /* Animation */
   transition: opacity 100ms ease;
 }
 
-/*******************************/
-/* || Hover Styles */
-/*******************************/
+/*******************************
+|| Hover Styles
+*******************************/
 .accordion-container:hover {
+  /* Display & Box Model */
   max-height: 500px;
 }
 
 .accordion-container:hover h2 {
+  /* Other */
   font-weight: 700;
 }
 
 .accordion-container:hover .accordion-body {
+  /* Other */
   opacity: 1.0;
 }
 
 
 .accordion-container:hover h2::before {
+  /* Other */
   content: "-";
   font-weight: 2rem;
 }
@@ -132,9 +169,11 @@ li {
 /* || Utilities */
 /*******************************/
 .noBullets {
+  /* Other */
   list-style-type: none;
 }
 
 .debugging {
+  /* Display & Box Model */
   border: 1px solid red;
 }
