@@ -44,7 +44,7 @@ body {
 .modal {
   /* Display & Box Model */
   width: 50%;
-  min-width: 295px;
+  min-width: 316px;
   max-width: 400px;
   padding: 20px;
   border-radius: 10px;
@@ -150,7 +150,7 @@ li {
 
 .accordion-container:nth-child(2):hover {
   /* Display & Box Model */
-  max-height: 186px;
+  max-height: 200px;
 }
 
 .accordion-container:last-child:hover {
