@@ -137,7 +137,7 @@ li {
   opacity: 0;
 
   /* Animation */
-  transition: opacity 100ms ease;
+  transition: opacity 50ms 125ms ease;
 }
 
 /*******************************
