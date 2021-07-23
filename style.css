@@ -143,9 +143,19 @@ li {
 /*******************************
 || Hover Styles
 *******************************/
-.accordion-container:hover {
+.accordion-container:first-child:hover {
   /* Display & Box Model */
-  max-height: 500px;
+  max-height: 222px;
+}
+
+.accordion-container:nth-child(2):hover {
+  /* Display & Box Model */
+  max-height: 186px;
+}
+
+.accordion-container:last-child:hover {
+  /* Display & Box Model */
+  max-height: 156px;
 }
 
 .accordion-container:hover h2 {
