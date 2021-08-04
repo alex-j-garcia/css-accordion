@@ -54,6 +54,12 @@ body {
   box-shadow: 0 10px 15px -10px hsla(0, 0%, 0%, 0.1);
 }
 
+.accordion,
+.accordion-container {
+  /* Other */
+  overflow: hidden;
+}
+
 h1 {
   /* Display & Box Model */
   margin-bottom: 20px;
